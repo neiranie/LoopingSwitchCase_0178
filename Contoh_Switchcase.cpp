@@ -1,15 +1,16 @@
 #include <iostream>
 using namespace std;
 
-double hitungIpk(double total, int sks){
+double hitungIpk(double total, int sks)
 {
     return total / sks;
 }
 
-string predikat (double ipk)
-
+string predikat(double ipk)
 {
+       
     if (ipk < 10)
+    {
         return "Memuaskan";
     }
     else
@@ -26,18 +27,17 @@ int main()
 
     do
     {
-        cout << "Pilih Menu"<< endl;
+        cout << "Pilih Menu" << endl;
         cout << "1. Cek nilai IPK" << endl;
         cout << "2. Cek Predikat Kelulusan" << endl;
         cout << "3. Keluar"
-
-        cout << "Masukan pilihan (1/2/3) : ";
+    
+        << "Masukan pilihan (1/2/3) : ";
         cin >> pilihan;
 
         switch (pilihan)
         {
         case '1':
-            
             cout << "Masukan total nilai = ";
             cin >> total;
             cout << "Masukan jumlah sks = ";
@@ -46,16 +46,15 @@ int main()
             cout << "Nilai Ipk = " << hitungIpk(total, sks);
             break;
         case '2':
-            cout << "Predikat anda adalah " << predikat (hitungIpk(total, sks)) << endl;
+            cout << "Predikat anda adalah " << predikat(hitungIpk(total, sks)) << endl;
             break;
         case '3':
             break;
-        
+
         default:
             cout << "Pilihan anda salah" << endl;
             break;
         }
 
     } while (pilihan != 3);
-    
 }
